@@ -1,0 +1,46 @@
+<!doctype html>
+<!--
+  Name: Daniel Yu
+  Date: 2025-03-15
+  Description: Main entry point for Parallax-Point, a multiplayer sandbox game.
+               Loads styles, sets up import maps for Three.js, and imports
+               the main client script from its new location.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax-Point</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <!-- UI Overlay Elements (all positioned absolutely over the canvas) -->
+    <div id="info">
+        Parallax-Point | <span id="player-id">CONNECTING...</span>
+    </div>
+    <div id="status">
+        <span id="player-count">1 poopy online</span>
+    </div>
+    <div id="controls">
+        <div><span>[E]</span>Perspective Grab | <span>[Q]</span>Static Grab | <span>[F]</span>
+            Portal Gun | <span class="blue">[L/R]</span> | <span class="orange"></span>Portals</div>
+    </div>
+    <div id="crosshair"></div>
+
+    <!-- Import map for Three.js and its add‑ons (required by client code) -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <!-- Main client script (entry point) -->
+    <script type="module" src="src/client/clientMain.js"></script>
+</body>
+
+</html

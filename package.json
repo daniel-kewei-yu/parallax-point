@@ -1,0 +1,13 @@
+{
+  "name": "parallax-point",
+  "version": "1.0.0",
+  "description": "A browser-based multiplayer sandbox game with portals and physics",
+  "main": "src/client/clientMain.js",
+  "type": "module",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve . --cors"
+  },
+  "author": "Daniel Kewei Yu",
+  "license": "MIT"
+}
